@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> scientific calculator </title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+	<style>
+
+	*{} 
+input {
+	height :300px;
+	width:1500px;font-size: 30px;
+	font-family: cursive;
+}
+
+button {font-family: cursive;
+	font-size: 35px;
+margin-top: 10px;
+    width: 145px;
+	height :50px;
+margin: 7px;
+text-decoration: none;
+border: none;
+color: #000;
+background: #d6d6d6;
+}
+
+button:hover {
+	background-color: #000;
+	color: #fff;
+	transition: all .002s;
+}
+
+
+</style>
+
+</head>
+<body id="bodyy">
+
+	
+
+      <input type="text" name = "inpp" id="input">
+
+<br>
+
+      <button onclick="inp(1)"> 1 </button>
+
+      <button onclick="inp(2)"> 2 </button>
+
+      <button onclick="inp(3)"> 3 </button>
+
+
+      <button onclick="inp(4)"> 4 </button>
+
+      <button onclick="inp(5)"> 5 </button>
+
+      <button onclick="inp(6)"> 6 </button>
+
+      <button onclick="inp('+')"> + </button> 
+
+      
+
+
+      <button onclick="inp('-')"> - </button> 
+
+<br>
+
+
+      <button onclick="inp(7)"> 7 </button>
+
+      <button onclick="inp(8)"> 8 </button>
+
+      <button onclick="inp(9)"> 9 </button>
+      
+            <button onclick="inp('*')"> * </button> 
+
+
+
+      <button onclick="inp('.')"> . </button>
+
+
+
+
+<button onclick="inp(0)"> 0 </button>
+ <button style="background-color: green; color:#fff" onclick="inp('=')"> = </button>
+<button onclick="inp('/')"> / </button> 
+
+<br>
+<button onclick="sinclicked('log')">  log </button>
+
+
+<button onclick="sinclicked('sin')"> sin </button>
+<button onclick="sinclicked('cos')"> cos </button>
+<button onclick="sinclicked('tan')"> tan </button>
+<button onclick="sinclicked('cot')"> cot </button>
+<button onclick="sinclicked('sec')"> sec </button>
+<button onclick="sinclicked('cosec')"> cosec </button>
+<button onclick="sinclicked('%')"> % </button>
+
+
+<br>
+
+
+
+
+
+
+
+<button onclick="sinclicked('sinh')"> sinh </button>
+<button onclick="sinclicked('cosh')"> cosh </button>
+<button onclick="sinclicked('tanh')"> tanh </button>
+
+<button onclick="sinclicked('coth')"> coth </button>
+<button onclick="sinclicked('sech')"> sech </button>
+<button onclick="sinclicked('cosech')"> cosech </button>
+<button onclick="sinclicked('x^3')"> x^3</button>
+
+<button onclick="sinclicked('x^2')"> x^2 </button>
+
+
+<br> 
+
+
+
+<button onclick="sinclicked('√')"> sqr </button>
+ 
+
+
+
+<button style=" background-color: orange" onclick="sinclicked('Exp')"> exp </button> 
+
+ 	<button style="width: 630px; color: #fff; background: red;" onclick="inp('c')"> ALL CLEAR </button>
+ 	<button style=" background-color: orange" onclick="sinc('Exp')" ondblclick="sincc('Exp')"> Dark</button> 
+ 	<!--<button style=" background-color: orange" onclick="sincc('Exp')"> Day </button> --->
+
+
+</div>
+
+
+
+<script>function inp(i) {var x=i;
+
+	if (x=="="){document.getElementById("input").value = eval(document.getElementById("input").value)}
+
+		else{document.getElementById("input").value+=i;}
+
+
+if(x=="c"){document.getElementById("input").value=""}
+
+
+}
+
+
+
+function sinclicked(j){if(j=="sin"){document.getElementById("input").value = Math.sin(document.getElementById("input").value)
+}
+
+if (j=="cos") 
+{document.getElementById("input").value = Math.cos(document.getElementById("input").value)
+}
+
+if(j=="tan"){document.getElementById("input").value = Math.tan(document.getElementById("input").value)
+}
+
+if(j=="cot"){document.getElementById("input").value =(1 / Math.tan(document.getElementById("input").value))
+}
+
+if(j=="sec"){document.getElementById("input").value =(1 / Math.cos(document.getElementById("input").value))
+}
+
+if(j=="cosec"){document.getElementById("input").value =(1 / Math.sin(document.getElementById("input").value))
+}
+
+if(j=="sinh"){document.getElementById("input").value = Math.sinh(document.getElementById("input").value)
+}
+
+if(j=="cosh"){document.getElementById("input").value = Math.cosh(document.getElementById("input").value)
+}
+
+if(j=="tanh"){document.getElementById("input").value = Math.tanh(document.getElementById("input").value)
+}
+
+if(j=="coth"){document.getElementById("input").value = (1 / Math.sinh(document.getElementById("input").value))
+}
+
+if(j=="sech"){document.getElementById("input").value =(1/ Math.cosh(document.getElementById("input").value))
+}
+
+if(j=="cosech"){document.getElementById("input").value = (1 / Math.cosech(document.getElementById("input").value)
+)}
+
+	if(j=="√"){document.getElementById("input").value = Math.sqrt(document.getElementById("input").value)
+}
+
+
+if(j=="%"){document.getElementById("input").value = (document.getElementById("input").value/100)
+}
+
+if(j=="Exp"){document.getElementById("input").value = Math.exp(document.getElementById("input").value)
+}
+
+if(j=="log"){document.getElementById("input").value = Math.log(document.getElementById("input").value)
+}
+
+if(j=="x^2")
+{document.getElementById("input").value = Math.pow(document.getElementById("input").value , 2);
+}
+
+if(j=="x^3"){document.getElementById("input").value = Math.pow(document.getElementById("input").value , 3);
+
+
+}
+}
+
+function sinc() {
+
+	document.getElementById("bodyy").setAttribute("style" , "background:#000; color:#fff;")
+		document.getElementById("input").setAttribute("style" , "background:#000; color:#fff;")
+	document.getElementsByTagName("button").setAttribute("style" , " color:white;")
+
+}
+
+
+function sincc() {
+
+	document.getElementById("bodyy").setAttribute("style" , "background:#fff; color:#000;")
+		document.getElementById("input").setAttribute("style" , "background:#fff; color:#000;")
+	document.getElementsByTagName("button").setAttribute("style" , " color:white;")
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
